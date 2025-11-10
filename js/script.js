@@ -1,5 +1,3 @@
-let indiceBiciclettaLeggera = 0
-let biciclettaLeggera = biciclette[indiceBiciclettaLeggera];
 
 for (let i = 0; i < biciclette.length; i++) {
     // console.log(i)
@@ -8,20 +6,7 @@ for (let i = 0; i < biciclette.length; i++) {
         indiceBiciclettaLeggera = i + 1
     }
 }
-
 console.log(`la bicicletta numero ${indiceBiciclettaLeggera} con indice del tuo array ${indiceBiciclettaLeggera - 1} ha il peso ${biciclettaLeggera} ed è la piu leggera `);
-
-const squadre = [
-    { nome: "Roma", Punti: 0, Falli: 0 },
-    { nome: "Lazio", Punti: 0, Falli: 0 },
-    { nome: "Napoli", Punti: 0, Falli: 0 },
-    { nome: "Inter", Punti: 0, Falli: 0 },
-    { nome: "Milan", Punti: 0, Falli: 0 },
-    { nome: "Fiorentina", Punti: 0, Falli: 0 },
-    { nome: "Juventus", Punti: 0, Falli: 0 },
-]
-
-let nomeFalli = []
 // function generatorePunti() {
 for (let i = 0; i < squadre.length; i++) {
     // let numeroGenerato = Math.floor(Math.random() * 114 + 1)
@@ -30,7 +15,6 @@ for (let i = 0; i < squadre.length; i++) {
     squadre[i].Falli = Math.floor(Math.random() * 200 + 1)
 }
 // }
-
 console.log(squadre);
 squadre.forEach(squadre => {
     nomeFalli.push({
@@ -38,7 +22,7 @@ squadre.forEach(squadre => {
     })
 })
 console.log(nomeFalli)
-let array = []
+
 function arrayCollegamento(array, a, b) {
 
     // early return
