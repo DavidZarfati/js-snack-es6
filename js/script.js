@@ -1,26 +1,14 @@
-const biciclette = [
-    { varieta: "Bmx", peso: 10 },
-    { varieta: "Shimano", peso: 13 },
-    { varieta: "Bici Da Cross", peso: 4 },
-    { varieta: "Bmx-2", peso: 11 },
-    { varieta: "Shimano-2", peso: 2 },
-    { varieta: "Bici Da Cross", peso: 5 },
-    { varieta: "Shimano-3", peso: 7 },
-    { varieta: "Bmx-3", peso: 3 },
-    { varieta: "Shimano-4", peso: 6 },
-    { varieta: "Bmx-4", peso: 14 },
-]
-let biciclettaLeggera = 10000
 let indiceBiciclettaLeggera = 0
+let biciclettaLeggera = biciclette[indiceBiciclettaLeggera];
+
 for (let i = 0; i < biciclette.length; i++) {
     // console.log(i)
     if (biciclette[i].peso < biciclettaLeggera) {
         biciclettaLeggera = biciclette[i].peso
         indiceBiciclettaLeggera = i + 1
     }
-
-
 }
+
 console.log(`la bicicletta numero ${indiceBiciclettaLeggera} con indice del tuo array ${indiceBiciclettaLeggera - 1} ha il peso ${biciclettaLeggera} ed è la piu leggera `);
 
 const squadre = [
@@ -52,6 +40,13 @@ squadre.forEach(squadre => {
 console.log(nomeFalli)
 let array = []
 function arrayCollegamento(array, a, b) {
+
+    // early return
+    if (a === b) {
+        console.log(`Complimenti! i tuoi numeri sono uguali, e sono ${a} e ${b} ed il tuo array come vedi... è VUOTO!`);
+        return;
+    }
+
     if (a < b) {
         for (let i = a + 1; i < b; i++) {
             array.push(i)
@@ -62,12 +57,11 @@ function arrayCollegamento(array, a, b) {
             array.push(i)
         }
     }
-    else {
-        console.log(`Complimenti! i tuoi numeri sono uguali, e sono ${a} e ${b} ed il tuo array come vedi... è VUOTO!`)
-    }
-    console.log(array)
-    array.length = 0
+
+    console.log('pieno', array)
+    return [];
 }
-arrayCollegamento(array, 10, 25)
-arrayCollegamento(array, 25, 10)
-arrayCollegamento(array, 15, 15)
+
+array = arrayCollegamento(array, 10, 25)
+array = arrayCollegamento(array, 45, 30)
+array = arrayCollegamento(array, 15, 15)
