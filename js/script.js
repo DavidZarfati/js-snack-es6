@@ -22,3 +22,31 @@ for (let i = 0; i < biciclette.length; i++) {
 
 }
 console.log(`la bicicletta numero ${indiceBiciclettaLeggera} con indice del tuo array ${indiceBiciclettaLeggera - 1} ha il peso ${biciclettaLeggera} ed è la piu leggera `);
+
+const squadre = [
+    { nome: "Roma", Punti: 0, Falli: 0 },
+    { nome: "Lazio", Punti: 0, Falli: 0 },
+    { nome: "Napoli", Punti: 0, Falli: 0 },
+    { nome: "Inter", Punti: 0, Falli: 0 },
+    { nome: "Milan", Punti: 0, Falli: 0 },
+    { nome: "Fiorentina", Punti: 0, Falli: 0 },
+    { nome: "Juventus", Punti: 0, Falli: 0 },
+]
+
+let nomeFalli = []
+// function generatorePunti() {
+for (let i = 0; i < squadre.length; i++) {
+    // let numeroGenerato = Math.floor(Math.random() * 114 + 1)
+    // squadre[i].Punti = numeroGenerato;
+    squadre[i].Punti = Math.floor(Math.random() * 114 + 1)
+    squadre[i].Falli = Math.floor(Math.random() * 200 + 1)
+}
+// }
+
+console.log(squadre);
+squadre.forEach(squadre => {
+    nomeFalli.push({
+        nome: squadre.nome, falli: squadre.Falli
+    })
+})
+console.log(nomeFalli)
