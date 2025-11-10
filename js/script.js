@@ -50,3 +50,24 @@ squadre.forEach(squadre => {
     })
 })
 console.log(nomeFalli)
+let array = []
+function arrayCollegamento(array, a, b) {
+    if (a < b) {
+        for (let i = a + 1; i < b; i++) {
+            array.push(i)
+        }
+    }
+    else if (a > b) {
+        for (let i = b + 1; i < a; i++) {
+            array.push(i)
+        }
+    }
+    else {
+        console.log(`Complimenti! i tuoi numeri sono uguali, e sono ${a} e ${b} ed il tuo array come vedi... è VUOTO!`)
+    }
+    console.log(array)
+    array.length = 0
+}
+arrayCollegamento(array, 10, 25)
+arrayCollegamento(array, 25, 10)
+arrayCollegamento(array, 15, 15)
