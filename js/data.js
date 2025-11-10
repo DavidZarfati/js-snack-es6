@@ -1,3 +1,4 @@
+// array di biciclette(oggetti)
 const biciclette = [
     { varieta: "Bmx", peso: 10 },
     { varieta: "Shimano", peso: 13 },
@@ -10,10 +11,11 @@ const biciclette = [
     { varieta: "Shimano-4", peso: 6 },
     { varieta: "Bmx-4", peso: 14 },
 ];
-
+// indice della bicicletta piu leggera di partenza(la prima quindi indice 0)
 let indiceBiciclettaLeggera = 0
+// Assumo come iniziale bicicletta piu leggera la prima
 let biciclettaLeggera = biciclette[indiceBiciclettaLeggera];
-
+// array di squadre(oggetti)
 const squadre = [
     { nome: "Roma", Punti: 0, Falli: 0 },
     { nome: "Lazio", Punti: 0, Falli: 0 },
@@ -23,7 +25,8 @@ const squadre = [
     { nome: "Fiorentina", Punti: 0, Falli: 0 },
     { nome: "Juventus", Punti: 0, Falli: 0 },
 ]
-
+// Creo un array che riempiro solo con nomi delle squadre e i rispettivi falli
 let nomeFalli = []
 
+// creo l'array vuoto per poterlo riempire con i numeri tra a e b
 let array = []
