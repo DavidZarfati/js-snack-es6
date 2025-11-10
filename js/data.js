@@ -29,4 +29,5 @@ const squadre = [
 let nomeFalli = []
 
 // creo l'array vuoto per poterlo riempire con i numeri tra a e b
-let array = []
+let array = [6, 4, 22, 354, 42, 32, 21, 211, 64, 65]
+let arrayNuovo = []
